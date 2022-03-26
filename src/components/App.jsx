@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { nanoid } from 'nanoid'
 import ComposeForm from './ComposeForm'
 import Timeline from './Timeline'
@@ -12,7 +12,12 @@ const CURRENT_USER = 'alvian'
 
 // first react component (using functional component)
 function App() {
-  const [tweets, setTweets] = useState(initialTweets)
+  const [tweets, setTweets] = useState([])
+
+  useEffect(() => {
+    setTweets(initialTweets)
+  }, [])
+
   // handler when we post a new tweet
   const handlePostTweet = (content) => {
     const newTweet = {
