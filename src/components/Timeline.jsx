@@ -22,4 +22,4 @@ Timeline.propTypes = {
   tweets: PropTypes.array,
 }
 
-export default Timeline
+export default Timeline     

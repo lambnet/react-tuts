@@ -5,9 +5,11 @@ import './ComposeForm.css'
 function ComposeForm({ onSubmit }) {
   const [editorValue, setEditorValue] = useState('')
   console.log(editorValue)
+
   const handleEditorValueChange = (e) => {
     setEditorValue(e.target.value)
   }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     onSubmit(editorValue)
@@ -26,9 +28,6 @@ function ComposeForm({ onSubmit }) {
       </div>
       <button className="compose-form-submit">Tweet</button>
     </form>
-
-
-
   )
 }
 

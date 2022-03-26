@@ -6,7 +6,6 @@ import './Tweet.css'
 
 function Tweet(props) {
   const { user, createdOn, children } = props
-
   return (
     <div className="tweet">
       <Avatar name={user} />
@@ -17,7 +16,7 @@ function Tweet(props) {
             {moment(createdOn).fromNow()}
           </span>
         </div>
-        <div className="tweet-content">{children}</div>
+        <div className="tweet-content">{children} </div>
       </div>
     </div>
   )
